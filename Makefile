@@ -4,13 +4,13 @@ CCEND=\033[0m
 localConfig       := ./vanityURLs.conf
 include           $(localConfig)
 
-.PHONY: help
+.PHONY: help build setup
 
 help: ## Show this help.
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {sub("\\\\n",sprintf("\n%22c"," "), $$2);printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
 debug:
-	echo $(MY_DOMAIN)
+	@echo $(MY_DOMAIN)
 	[ -f $(localConfig) ] && source $(localConfig)
 
 config: ## Modify the .vanityURLs.conf before running setup
@@ -18,7 +18,6 @@ config: ## Modify the .vanityURLs.conf before running setup
 
 setup: ## Setup the environment
 	cp vanityURLs.conf ~/.vanityURLs.conf
-
 	mkdir -p $(SCRIPT_DIR)
 	cp scripts/* $(SCRIPT_DIR)
 	chmod +x $(SCRIPT_DIR)/lnk
@@ -48,3 +47,10 @@ setup: ## Setup the environment
 	echo "/mail https://outlook.office.com/" >> static.lnk
 	echo "/gmail https://gmail.com/" >> static.lnk
 	echo "/slack https://example.slack.com/" >> static.lnk
+
+build: ## Local build instead of CI/CD
+	cat static.lnk dynamic.lnk > build/_redirects
+
+clean:
+	rm ./all-contributorsrc
+	rm -rf ./doc
