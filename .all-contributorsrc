@@ -1,0 +1,56 @@
+{
+  "projectName": "vanityURLs",
+  "projectOwner": "bhdicaire",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "contributorsSortAlphabetically": true,
+  "contributorsPerLine": 6,
+  "imageSize": 100,
+  "contributors": [
+    {
+      "login": "bhdicaire",
+      "name": "Benoît H. Dicaire",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1316765?v=4",
+      "profile": "https://github.com/bhdicaire",
+      "contributions": [
+        "code",
+        "doc",
+        "security"
+      ]
+    },
+    {
+      "login": "felleg",
+      "name": "Félix Léger",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7781739?v=4",
+      "profile": "http://felixleger.com",
+      "contributions": [
+        "ideas",
+        "userTesting",
+        "promotion"
+      ]
+    },
+    {
+      "login": "slig",
+      "name": "Tiago Serafim",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37779?v=4",
+      "profile": "https://github.com/slig",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "XVII",
+      "name": "Jake Edwards",
+      "avatar_url": "https://avatars.githubusercontent.com/u/446329?v=4",
+      "profile": "https://xvii.au",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "commitType": "docs",
+  "commitConvention": "angular"
+}
